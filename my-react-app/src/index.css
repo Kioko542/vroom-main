@@ -13,7 +13,7 @@ body{
  background: url('./components/images/showcaseimg.jpg'); 
 }
 .cont-img{
-  background-image: url('');
+  background-image: url('./components/images/showcaseimg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

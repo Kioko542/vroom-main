@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -32,9 +33,13 @@ const Contact = () => {
     // Display success message or navigate to a thank-you page
     alert('Thank you for contacting us!');
   };
-
-  return (
-    <div className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+    return (
+    <div className="container mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-8"data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
       <div>
         <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
 
