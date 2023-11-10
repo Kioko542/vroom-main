@@ -2,6 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faShoppingCart } from '@fortawesome/free-brands-svg-icons';
+import { faPlus, faMinus, faArrowUp, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -24,9 +25,12 @@ const Footer = () => {
           <a href="#" className="hover:text-gray-400">Privacy Policy</a>
           <a href="#" className="hover:text-gray-400">Terms of Service</a>
         </div>
-        <button onClick={scrollToTop} className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
-          Back to Top
-        </button>
+        <button
+            onClick={scrollToTop}
+            className="bg-black text-white py-2 px-4 rounded-full hover:bg-orange-300"
+          >
+            <FontAwesomeIcon icon={faArrowUp} />
+          </button>
       </div>
     </footer>
   );
