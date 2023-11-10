@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import aboutImage from '../images/about1.jpg'; 
-import missionImage from '../images/about2.jpg'; 
-import chooseUsImage from '../images/Login.jpg'; 
+import aboutImage from './images/about1.jpg'; 
+import missionImage from './images/about2.jpg'; 
+import chooseUsImage from './images/showcaseimg.jpg'; 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 const AboutPage = () => {

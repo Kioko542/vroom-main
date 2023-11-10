@@ -1,7 +1,4 @@
-// Contact.js
-
 import React, { useState } from 'react';
-import { db } from './assets/firebaseConfig';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -19,31 +16,21 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      await db.collection('contacts').add({
-        name: formData.name,
-        email: formData.email,
-        message: formData.message,
-      });
+    // Simulate a successful form submission
+    setSubmitted(true);
 
-      setSubmitted(true);
+    // Clear the form after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
 
-      // Clear the form after submission
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
-      });
-
-      // Display success message or navigate to a thank-you page
-      alert('Thank you for contacting us!');
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again.');
-    }
+    // Display success message or navigate to a thank-you page
+    alert('Thank you for contacting us!');
   };
 
   return (
@@ -54,9 +41,8 @@ const Contact = () => {
         <div className='cont-img h-full shadow-xl p-[50px] flex justify-center items-center '>
           <div className="text1">
             <p className=' text-white bg-black text-center p-4'> <span>Have a question,</span> feedback, or just want to say <span>hello?</span></p>
-            </div>
+          </div>
         </div>
-
       </div>
 
       <div className="mt-8">

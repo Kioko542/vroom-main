@@ -10,16 +10,16 @@ body{
   background-position: center;
   background-size: cover;
   
-  background-image: url('./images/showcaseimg.jpg');
+ background: url('./components/images/showcaseimg.jpg'); 
 }
 .cont-img{
-  background-image: url('./images/showcaseimg.jpg');
+  background-image: url('');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 #login{
-  background-image: url('./images/Login.jpg');
+ background-image: url('./components/images/Login.jpg'); 
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,32 +1,42 @@
-import React, { useEffect, useState } from 'react';
-import { auth } from './assets/firebaseConfig';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(()=>{
-AOS.init({duration: 2000})
-  },[])
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
 
-
-
-  const signIn = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
+  const signIn = () => {
+    // Simulate authentication logic
+    if (email === 'user@example.com' && password === 'password') {
+      setIsAuthenticated(true);
       navigate('/');
-    } catch (error) {
-      setError(error.message);
+
+      // Clear the form after successful login
+      setEmail('');
+      setPassword('');
+
+      // Show a simple alert for demonstration purposes
+      alert('Login successful!');
+    } else {
+      setError('Invalid email or password');
     }
   };
 
   return (
-    <div id="login" className="bg-black w-full min-h-screen text-white flex justify-center items-center " data-aos="fade-down" >
+    <div
+      id="login"
+      className="bg-black w-full min-h-screen text-white flex justify-center items-center "
+      data-aos="fade-down"
+    >
       <div className="container mx-auto flex flex-col sm:flex-row bg-black/50">
         <div className="w-full sm:w-1/2 p-4">
           <div className="main text-center text-4xl">
@@ -42,6 +52,7 @@ AOS.init({duration: 2000})
               className="text-black bg-white rounded-md p-2"
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email..."
+              value={email}
             />
             <label htmlFor="password" className="text-lg">
               Enter your password
@@ -51,6 +62,7 @@ AOS.init({duration: 2000})
               className="text-black bg-white rounded-md p-2"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password..."
+              value={password}
             />
           </div>
           {error && (
