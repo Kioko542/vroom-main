@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/vroom-main/static/css/main.e6e2549f.css",
+    "main.js": "/vroom-main/static/js/main.122fe3f2.js",
+    "static/js/787.38f16daf.chunk.js": "/vroom-main/static/js/787.38f16daf.chunk.js",
+    "static/media/Login.jpg": "/vroom-main/static/media/Login.f17ac6627d63c248b9b4.jpg",
+    "static/media/about1.jpg": "/vroom-main/static/media/about1.e06cca553ae645ea5cdd.jpg",
+    "static/media/showcaseimg.jpg": "/vroom-main/static/media/showcaseimg.afc942ba6588637418e0.jpg",
+    "static/media/about2.jpg": "/vroom-main/static/media/about2.ce265765521094e163f1.jpg",
+    "index.html": "/vroom-main/index.html",
+    "main.e6e2549f.css.map": "/vroom-main/static/css/main.e6e2549f.css.map",
+    "main.122fe3f2.js.map": "/vroom-main/static/js/main.122fe3f2.js.map",
+    "787.38f16daf.chunk.js.map": "/vroom-main/static/js/787.38f16daf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6e2549f.css",
+    "static/js/main.122fe3f2.js"
+  ]
+}
